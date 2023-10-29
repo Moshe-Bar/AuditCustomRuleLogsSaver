@@ -76,7 +76,7 @@ this rule should tell audit service to watch after all actions of type "rename",
 
 -----
 
-New logs created for the first custom rule:
+[New logs created for the first custom rule:](https://github.com/Moshe-Bar/AuditCustomRuleLogsSaver/blob/develop/screenshots/rule%201%20logs.png)
 
 command:
 ```bash
@@ -87,7 +87,7 @@ ausearch -k file_dir_delete
 
 -----
 
-Adding rule 2 to Auditd: 
+[Adding rule 2 to Auditd:](https://github.com/Moshe-Bar/AuditCustomRuleLogsSaver/blob/develop/screenshots/adding%20rule%202.png)
 
 command:
 ```bash
@@ -101,7 +101,7 @@ this rule will make audit to watch after a specific file called file_changes.txt
 
 -----
 
-New logs created for the second custom rule:
+[New logs created for the second custom rule:](https://github.com/Moshe-Bar/AuditCustomRuleLogsSaver/blob/develop/screenshots/rule%202%20logs.png)
 
 command:
 ```bash
@@ -112,7 +112,7 @@ ausearch -k write_file_watch
 
 -----
 
-After the script run's for the first time those records where added to the db:
+[After the script run's for the first time those records where added to the db:](https://github.com/Moshe-Bar/AuditCustomRuleLogsSaver/blob/develop/screenshots/logs%20in%20db.png)
 
 command:
 ```sql
@@ -123,8 +123,8 @@ command:
 
 -----
 
-After first run there is query for new records from 1698322018 date and on (Thu Oct 26 2023 15:06:58), there are no new records so the query returns 0.
-utf stands for unix-time-format although the popular name is UTS (Unix-time-stamp):
+[After first run there is query for new records from 1698322018 date and on (Thu Oct 26 2023 15:06:58), there are no new records so the query returns 0.
+utf stands for unix-time-format although the popular name is UTS (Unix-time-stamp):](https://github.com/Moshe-Bar/AuditCustomRuleLogsSaver/blob/develop/screenshots/before%20second%20run.png)
 
 command:
 ```sql
@@ -135,7 +135,7 @@ command:
 
 -----
 
-After the second run there are more records in db so the same query as before results new records:
+[After the second run there are more records in db so the same query as before results new records:](https://github.com/Moshe-Bar/AuditCustomRuleLogsSaver/blob/develop/screenshots/after%20second%20run.png)
 
 command:
 ```sql
@@ -146,7 +146,7 @@ command:
 
 -----
 
-Query for search the number of different types of rules in db:
+[Query for search the number of different types of rules in db:](https://github.com/Moshe-Bar/AuditCustomRuleLogsSaver/blob/develop/screenshots/types%20of%20rules.png)
 
 command:
 ```sql
@@ -157,7 +157,8 @@ command:
 
 -----
 
-Query for search the most frequent rule type of logs:
+[Query for search the most frequent rule type of logs:](https://github.com/Moshe-Bar/AuditCustomRuleLogsSaver/blob/develop/screenshots/rule%201.png)
+
 
 command:
 ```SQL
@@ -171,7 +172,7 @@ LIMIT 1;
 
 -----
 
-Query for all logs of rule 1:
+[Query for all logs of rule 1:](https://github.com/Moshe-Bar/AuditCustomRuleLogsSaver/blob/develop/screenshots/filter%20by%20rule%201%20in%20db.png)
 
 command:
 ```SQL
@@ -185,7 +186,7 @@ LIMIT 10;
 
 -----
 
-Query for all logs of rule 2:
+[Query for all logs of rule 2:](https://github.com/Moshe-Bar/AuditCustomRuleLogsSaver/blob/develop/screenshots/filter%20by%20rule2%20in%20db.png)
 
 command:
 ```SQL
