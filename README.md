@@ -80,4 +80,15 @@ command:
  
 adding the second rule to Auditd.
 this rule will make audit to watch after a specific file called file_changes.txt whether the file content is changed or its attributes changes. 
-![Adding rule 1 to Auditd](https://github.com/Moshe-Bar/AuditCustomRuleLogsSaver/blob/develop/screenshots/adding%20rule%202.png)
+![Adding rule 2 to Auditd](https://github.com/Moshe-Bar/AuditCustomRuleLogsSaver/blob/develop/screenshots/adding%20rule%202.png)
+
+After the script run's for the first time those records where added to the db:
+![Logs in DB](https://github.com/Moshe-Bar/AuditCustomRuleLogsSaver/blob/develop/screenshots/logs%20in%20db.png)
+
+
+After first run there is query for new records from 1698322018 date and on (Thu Oct 26 2023 15:06:58), there are no new records so the query returns 0.
+utf stands for unix-time-format although the popular name is UTS (Unix-time-stamp).
+![Query for new records](https://github.com/Moshe-Bar/AuditCustomRuleLogsSaver/blob/develop/screenshots/before%20second%20run.png)
+
+After the second run there are more records in db so the same query as before results new records
+![Query for new records after second run](https://github.com/Moshe-Bar/AuditCustomRuleLogsSaver/blob/develop/screenshots/after%20second%20run.png)
