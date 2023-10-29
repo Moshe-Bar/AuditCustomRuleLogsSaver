@@ -1,5 +1,5 @@
 # Audit deamon custom rule logs saver
-This tool reads logs of Audit deamon service and savig them in local sqlite-db.
+This tool reads logs of Audit deamon service and saving them in local sqlite-db.
 
 
 The tool is intended for those who want to monitor system logs that were written due to system actions that were activated and that had to be detected according to Auditd rules
