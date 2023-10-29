@@ -29,12 +29,6 @@ Install dependencies
   apt -y update
   apt install python3
 ```
-
-
-## Installation
-
-Install AuditCustomRuleLogsSaver with git
-
 ```bash
   git clone  https://github.com/Moshe-Bar/AuditCustomRuleLogsSaver.git
   cd AuditCustomRuleLogsSaver
@@ -48,16 +42,19 @@ Start the script
 ```bash
   python3 -m venv venv
 ```
-```
+```bash
   source venv/bin/activate
 ```
-```
+```bash
   pip install -r requirements.txt  
 ```
-```
+```bash
 python3 main.py
 ```
 
 
+## Screenshots
+
+![Adding rule 1 to Auditd](\screenshots\adding rule 1.png)
 
 
