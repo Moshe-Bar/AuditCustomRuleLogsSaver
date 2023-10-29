@@ -56,9 +56,13 @@ python3 main.py
 ## Screenshots
 
 Important notes!
-Those are non persistent rules which means that after the Auditd service restarts they will be deleted.
+- Those are non persistent rules which means that after the Auditd service restarts they will be deleted. more info on: https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/security_guide/sec-defining_audit_rules_and_controls_in_the_audit.rules_file
 
-more info on: https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/security_guide/sec-defining_audit_rules_and_controls_in_the_audit.rules_file
+- For executing SQL queries i used Ubuntu tool called: "DB Browser for SQLite",
+the tool can be found and downloaded from Ubuntu store app.
+
+
+
 
 -----
 
@@ -204,5 +208,62 @@ LIMIT 10;
 ```
 
 ![Rule 2 logs](https://github.com/Moshe-Bar/AuditCustomRuleLogsSaver/blob/develop/screenshots/filter%20by%20rule2%20in%20db.png)
+
+-----
+
+[Query for least frequent rule:](https://github.com/Moshe-Bar/AuditCustomRuleLogsSaver/blob/develop/screenshots/least%20frequent%20rule.png)
+
+command:
+```SQL
+SELECT log_key AS Least_frequent_rule 
+FROM Logs 
+GROUP BY log_key
+ORDER BY log_key DESC
+LIMIT 1;
+```
+
+![Least frequent rule](https://github.com/Moshe-Bar/AuditCustomRuleLogsSaver/blob/develop/screenshots/least%20frequent%20rule.png)
+
+-----
+
+[Query for most frequent dir of files caused the logs event:](https://github.com/Moshe-Bar/AuditCustomRuleLogsSaver/blob/develop/screenshots/most%20frequent%20dir.png)
+
+command:
+```SQL
+SELECT dir AS Most_frequent_directory 
+FROM Logs 
+GROUP BY dir
+LIMIT 1;
+```
+
+![Most frequent dir](https://github.com/Moshe-Bar/AuditCustomRuleLogsSaver/blob/develop/screenshots/most%20frequent%20dir.png)
+
+-----
+
+[Query for most frequent rule caused the logs event:](https://github.com/Moshe-Bar/AuditCustomRuleLogsSaver/blob/develop/screenshots/most%20frequent%20rule.png)
+
+command:
+```SQL
+SELECT log_key AS Most_frequent_rule
+FROM Logs 
+GROUP BY log_key
+LIMIT 1;
+```
+
+![Most frequent rule](https://github.com/Moshe-Bar/AuditCustomRuleLogsSaver/blob/develop/screenshots/most%20frequent%20rule.png)
+
+-----
+
+[Query for most frequent user responsible of the logs event:](https://github.com/Moshe-Bar/AuditCustomRuleLogsSaver/blob/develop/screenshots/most%20frequent%20user.png)
+
+command:
+```SQL
+SELECT user AS Most_frequent_user
+FROM Logs 
+GROUP BY user
+LIMIT 1;
+```
+
+![Most frequent user](https://github.com/Moshe-Bar/AuditCustomRuleLogsSaver/blob/develop/screenshots/most%20frequent%20user.png)
 
 -----
