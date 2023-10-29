@@ -55,6 +55,8 @@ python3 main.py
 
 ## Screenshots
 
+Adding rule 1 to Auditd: 
+in this example we see no custom rules exist yet and after adding the first rule it shows up in the list of rules
 ![Adding rule 1 to Auditd](https://github.com/Moshe-Bar/AuditCustomRuleLogsSaver/blob/develop/screenshots/adding%20rule%201.png)
 
 
