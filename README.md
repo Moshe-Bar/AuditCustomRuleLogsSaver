@@ -172,10 +172,7 @@ Query for all logs of rule 1.
 
 command:
 ```sql
-SELECT * 
-FROM Logs 
-WHERE log_key = 'file_dir_delete'
-LIMIT 10;
+SELECT * FROM Logs WHERE log_key = 'file_dir_delete'LIMIT 10;
 ```
 
 ![Rule 1 logs](https://github.com/Moshe-Bar/AuditCustomRuleLogsSaver/blob/develop/screenshots/filter%20by%20rule%201%20in%20db.png)
@@ -186,10 +183,7 @@ Query for all logs of rule 2.
 
 command:
 ```sql
-SELECT * 
-FROM Logs 
-WHERE log_key = 'write_file_watch'
-LIMIT 10;
+SELECT * FROM Logs WHERE log_key = 'write_file_watch' LIMIT 10;
 ```
 
 ![Rule 2 logs](https://github.com/Moshe-Bar/AuditCustomRuleLogsSaver/blob/develop/screenshots/filter%20by%20rule2%20in%20db.png)
