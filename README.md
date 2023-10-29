@@ -55,6 +55,6 @@ python3 main.py
 
 ## Screenshots
 
-![Adding rule 1 to Auditd](\screenshots\adding rule 1.png)
+![Adding rule 1 to Auditd](https://github.com/Moshe-Bar/AuditCustomRuleLogsSaver/blob/develop/screenshots/adding%20rule%201.png)
 
 
