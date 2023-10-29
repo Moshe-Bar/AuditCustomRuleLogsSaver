@@ -62,7 +62,7 @@ more info on: https://access.redhat.com/documentation/en-us/red_hat_enterprise_l
 
 -----
 
-Adding rule 1 to Auditd:
+[Adding rule 1 to Auditd:](https://github.com/Moshe-Bar/AuditCustomRuleLogsSaver/blob/develop/screenshots/adding%20rule%201.png)
 
 command: 
 ```bash
@@ -95,7 +95,7 @@ auditctl -w /home/mo/file_changes.txt -p wa -k write_file_watch
 ```
  
 Adding the second rule to Auditd.
-this rule will make audit to watch after a specific file called file_changes.txt whether the file content is changed or its attributes changes. 
+this rule will make audit to watch after a specific file called file_changes.txt whether the file content is changed or its attributes changes: 
 
 ![Adding rule 2 to Auditd](https://github.com/Moshe-Bar/AuditCustomRuleLogsSaver/blob/develop/screenshots/adding%20rule%202.png)
 
@@ -112,7 +112,7 @@ ausearch -k write_file_watch
 
 -----
 
-After the script run's for the first time those records where added to the db.
+After the script run's for the first time those records where added to the db:
 
 command:
 ```sql
@@ -124,7 +124,7 @@ command:
 -----
 
 After first run there is query for new records from 1698322018 date and on (Thu Oct 26 2023 15:06:58), there are no new records so the query returns 0.
-utf stands for unix-time-format although the popular name is UTS (Unix-time-stamp).
+utf stands for unix-time-format although the popular name is UTS (Unix-time-stamp):
 
 command:
 ```sql
@@ -135,7 +135,7 @@ command:
 
 -----
 
-After the second run there are more records in db so the same query as before results new records.
+After the second run there are more records in db so the same query as before results new records:
 
 command:
 ```sql
@@ -146,7 +146,7 @@ command:
 
 -----
 
-Query for search the number of different types of rules in db.
+Query for search the number of different types of rules in db:
 
 command:
 ```sql
@@ -157,33 +157,42 @@ command:
 
 -----
 
-Query for search the most frequent rule type of logs.
+Query for search the most frequent rule type of logs:
 
 command:
-```sql
-
+```SQL
+SELECT log_key
+FROM Logs
+GROUP BY log_key
+LIMIT 1;
 ```
 
 ![Most frequent rule logs](https://github.com/Moshe-Bar/AuditCustomRuleLogsSaver/blob/develop/screenshots/rule%201.png)
 
 -----
 
-Query for all logs of rule 1.
+Query for all logs of rule 1:
 
 command:
 ```SQL
-SELECT * FROM Logs WHERE log_key = 'file_dir_delete'LIMIT 10;
+SELECT * 
+FROM Logs 
+WHERE log_key = 'file_dir_delete' 
+LIMIT 10;
 ```
 
 ![Rule 1 logs](https://github.com/Moshe-Bar/AuditCustomRuleLogsSaver/blob/develop/screenshots/filter%20by%20rule%201%20in%20db.png)
 
 -----
 
-Query for all logs of rule 2.
+Query for all logs of rule 2:
 
 command:
 ```SQL
-SELECT * FROM Logs WHERE log_key = 'write_file_watch' LIMIT 10;
+SELECT * 
+FROM Logs 
+WHERE log_key = 'write_file_watch' 
+LIMIT 10;
 ```
 
 ![Rule 2 logs](https://github.com/Moshe-Bar/AuditCustomRuleLogsSaver/blob/develop/screenshots/filter%20by%20rule2%20in%20db.png)
