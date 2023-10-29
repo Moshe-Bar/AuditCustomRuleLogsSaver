@@ -22,7 +22,6 @@ The tool is intended for those who want to monitor system logs that were written
 ## Run Locally
 
 Using Ubuntu 22 as OS
-Go to the project directory
 
 Install dependencies
 
@@ -31,6 +30,18 @@ Install dependencies
   apt install python3
 ```
 
+
+## Installation
+
+Install AuditCustomRuleLogsSaver with git
+
+```bash
+  git clone  https://github.com/Moshe-Bar/AuditCustomRuleLogsSaver.git
+  cd AuditCustomRuleLogsSaver
+```
+
+## Usage/Examples
+
 Start the script
 
 
@@ -38,12 +49,15 @@ Start the script
   python3 -m venv venv
 ```
 ```
+  source venv/bin/activate
+```
+```
   pip install -r requirements.txt  
 ```
-
-
-## Usage/Examples
-
 ```
 python3 main.py
 ```
+
+
+
+
