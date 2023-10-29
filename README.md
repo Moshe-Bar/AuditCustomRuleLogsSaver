@@ -1,4 +1,3 @@
-
 # Audit deamon custom rule logs saver
 This tool reads logs of Audit deamon service and savig them in local sqlite-db.
 
@@ -7,9 +6,9 @@ The tool is intended for those who want to monitor system logs that were written
 
 
 ## Acknowledgements
- - [Audit overview](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/security_guide/chap-system_auditing)
- - [Audit logs explanation](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/security_guide/sec-understanding_audit_log_files)
- - [Audt rules overview](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/security_guide/sec-defining_audit_rules_and_controls)
+ - [Auditd overview](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/security_guide/chap-system_auditing)
+ - [Auditd logs explanation](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/security_guide/sec-understanding_audit_log_files)
+ - [Auditd rules overview](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/security_guide/sec-defining_audit_rules_and_controls)
 
 
 
