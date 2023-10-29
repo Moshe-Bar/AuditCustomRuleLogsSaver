@@ -171,7 +171,7 @@ command:
 Query for all logs of rule 1.
 
 command:
-```sql
+```SQL
 SELECT * FROM Logs WHERE log_key = 'file_dir_delete'LIMIT 10;
 ```
 
@@ -182,7 +182,7 @@ SELECT * FROM Logs WHERE log_key = 'file_dir_delete'LIMIT 10;
 Query for all logs of rule 2.
 
 command:
-```sql
+```SQL
 SELECT * FROM Logs WHERE log_key = 'write_file_watch' LIMIT 10;
 ```
 
