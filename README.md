@@ -116,7 +116,8 @@ ausearch -k write_file_watch
 
 command:
 ```sql
-
+SELECT *
+FROM Logs;
 ```
 
 ![Logs in DB](https://github.com/Moshe-Bar/AuditCustomRuleLogsSaver/blob/develop/screenshots/logs%20in%20db.png)
@@ -128,7 +129,9 @@ utf stands for unix-time-format although the popular name is UTS (Unix-time-stam
 
 command:
 ```sql
-
+SELECT COUNT(*) 
+FROM Logs
+WHERE utf>16983220180.542;
 ```
 
 ![Query for new records](https://github.com/Moshe-Bar/AuditCustomRuleLogsSaver/blob/develop/screenshots/before%20second%20run.png)
@@ -139,6 +142,9 @@ command:
 
 command:
 ```sql
+SELECT COUNT(*) 
+FROM Logs
+WHERE utf>16983220180.542;
 
 ```
 
@@ -150,10 +156,11 @@ command:
 
 command:
 ```sql
-
+SELECT COUNT(DISTINCT log_key)
+FROM Logs;
 ```
 
-![Query for new records after second run](https://github.com/Moshe-Bar/AuditCustomRuleLogsSaver/blob/develop/screenshots/types%20of%20rules.png)
+![Query for number of rules](https://github.com/Moshe-Bar/AuditCustomRuleLogsSaver/blob/develop/screenshots/types%20of%20rules.png)
 
 -----
 
