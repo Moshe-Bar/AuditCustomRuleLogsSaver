@@ -3,3 +3,4 @@ audit_log_file: audit\.log[\.|\d]*
 sql_con: auditd.db
 main_table_name: Logs
 log_regex: type=SYSCALL.*\((\d{0,10}\.\d{0,3}):(\d{0,10})\).*key=\"(.+?)\".*SYSCALL=(.*?) .*UID=\"([a-z]*)\"[\s\S]*? item=0 name=\"(.*?)\" [\s\S]*?proctitle=.*
+single_log_regex: type=.*\((\d{0,10}\.\d{0,3}):(\d{0,10})\).*

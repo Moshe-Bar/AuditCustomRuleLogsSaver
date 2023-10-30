@@ -1,6 +1,30 @@
 from datetime import datetime
 import re
 
+class ASingleLog():
+    def __init__(self, log=None,uts=None,id=None, regex_match:re.Match=None):
+        if regex_match :
+            self.log = regex_match.group(0)
+            self.uts = float(regex_match.group(1))
+            self.id = int(regex_match.group(2))
+        else :
+            self.log = log
+            self.uts = float(uts)
+            self.id = int(id)
+
+    def __lt__(self, other):
+        if self.utf > other.utf:
+            return False
+        elif self.utf < other.utf or self.index < other.index:
+            return True
+
+    def group_id(self):
+        return f'{self.uts}:{self.id}
+class AFullLog():
+    def __init(self,logs:ASingleLog):
+
+
+
 
 class ALog():
     def __init__(self, time_stamp=None, utf=None, index=None, event_type=None, full_log=None, log_key=None, user=None, dir=None,regex_match:re.Match=None):
